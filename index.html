@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./stylesheets/fa/css/all.css">
+	<link rel="stylesheet" href="./stylesheets/styles.css">
+	<title>UpVote!</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<h1>UpVote!</h1>
+		</nav>
+	</header>
+	<main>
+		<div class="app" id="app">
+			<div class="card-temp" v-for="submission in sortedSubmissions" v-bind:key="submission.id">
+				<div class="card">
+				<div class="card__dets">
+					<img alt="Avatar1" v-bind:src="submission.avatar">
+					<p>{{ submission.name }}</p>
+				</div>
+				<div class="card__post">
+					{{ submission.post }}
+				</div>
+				<div class="card__likes">
+					<span v-on:click="upvote(submission.id)">
+						<i class="fa-regular fa-thumbs-up"></i>
+						<strong class="card__likes-num">
+							{{ submission.votes }}
+						</strong>
+					</span>
+				</div>
+			</div>
+			</div>
+		</div>
+	</main>
+
+
+	<!-- Script -->
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script src="./app/seed.js"></script>
+	<script src="./app/main.js"></script>
+</body>
+</html>
