@@ -19,7 +19,7 @@
 			<div class="card-temp"
 			v-for="submission in sortedSubmissions"
 			v-bind:key="submission.id"
-			v-bind:class="{'blue-border': submission.votes >= 20}">
+			v-bind:class="{'blue-border': submission.votes >= 20}"> <!-- Binding to class to apply the class under given condition -->
 				<!-- Bind submission to submission data and submissions to sorted list -->
 				<submission-component 
 				v-bind:submission="submission"

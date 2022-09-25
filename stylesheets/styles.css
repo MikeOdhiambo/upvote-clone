@@ -100,7 +100,10 @@ i{
 i:hover{
 	transform: scale(1.15);
 }
-.blue-border{
-	border: 3px solid blue;
-	border-radius: 1rem;
+.blue-border::before{
+	content: "Top rated";
+	color:chartreuse ;
+	font-weight: bold;
+	margin-left: auto;
+	padding: 0.5rem 1rem 0;
 }

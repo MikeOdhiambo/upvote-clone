@@ -26,6 +26,8 @@ const submissionComponent = {
     },
   },
 };
+
+// MAIN APP
 const upvoteApp = {
   data() {
     return {
