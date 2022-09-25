@@ -16,24 +16,14 @@
 	</header>
 	<main>
 		<div class="app" id="app">
-			<div class="card-temp" v-for="submission in sortedSubmissions" v-bind:key="submission.id">
-				<div class="card">
-				<div class="card__dets">
-					<img alt="Avatar1" v-bind:src="submission.avatar">
-					<p>{{ submission.name }}</p>
-				</div>
-				<div class="card__post">
-					{{ submission.post }}
-				</div>
-				<div class="card__likes">
-					<span v-on:click="upvote(submission.id)">
-						<i class="fa-regular fa-thumbs-up"></i>
-						<strong class="card__likes-num">
-							{{ submission.votes }}
-						</strong>
-					</span>
-				</div>
-			</div>
+			<div class="card-temp"
+			v-for="submission in sortedSubmissions"
+			v-bind:key="submission.id"
+			v-bind:class="{'blue-border': submission.votes >= 20}">
+				<!-- Bind submission to submission data and submissions to sorted list -->
+				<submission-component 
+				v-bind:submission="submission"
+				v-bind:submissions="sortedSubmissions"></submission-component>
 			</div>
 		</div>
 	</main>
