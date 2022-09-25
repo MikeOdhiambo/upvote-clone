@@ -1,5 +1,5 @@
 # UpVote
-A simple social media page based on The Office characters built while learning Vue.js concepts.
+A simple social media page based on The Office characters built with Vue.js. The app ranks the posts based on the number of likes.
 
 ## Concepts
 I was introduces to the following concepts:
